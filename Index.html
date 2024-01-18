@@ -4,29 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Site</title>
-    <style> 
+    <style>
+    
+    body{
+        padding: 0px;
+        margin: 0px;
+    }
     header{
-        height: 170px;
-        border:1px solid black;
+        height: 550px;
+       
+        background:url("Media/Pictures/achtergrondFoto.png");
+        background-size: cover;
     }
     #logo{
-        width: 280px;
-        height: 155px;
+        width:  300px;
+        height: 105px;
         float: left;
-        border: 1px solid black;
-        margin-top: 5px;
-        margin-left: 5px;
+        margin-top: 1%;
+        margin-left: -2%;
         background-image: url("Media/Pictures/logo.png");
         background-position: center;
+        background-size:75%;
+        background-repeat: no-repeat ; 
+        opacity: 1;
     }
+    #balk-boven{
+        height: 130px;
+        background: white;
+        opacity: 0.9;
+    }   
+    .menus{
+        border:1px solid black;
+        height:60px;
+        width: 200px;
+        float: right;
+        margin-top: 2%;
+        margin-right: 2px;
+        text-align: center;
+        line-height: 60px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: large;  
+    }
+    .button {
+        float: right;
+        margin-top: 2%;
+        margin-right: 2px;
+ --color: #00A97F;
+ padding: 0.8em 1.7em;
+ background-color: transparent;
+ border-radius: .3em;
+ position: relative;
+ overflow: hidden;
+ cursor: pointer;
+ transition: .5s;
+ font-weight: 400;
+ font-size: 17px;
+ border: 1px solid;
+ font-family: inherit;
+ text-transform: uppercase;
+ color: var(--color);
+ z-index: 1;
+}
+
+.button::before, .button::after {
+ content: '';
+ display: block;
+ width: 50px;
+ height: 50px;
+ transform: translate(-50%, -50%);
+ position: absolute;
+ border-radius: 50%;
+ z-index: -1;
+ background-color: var(--color);
+ transition: 1s ease;
+}
+
+.button::before {
+ top: -1em;
+ left: -1em;
+}
+
+.button::after {
+ left: calc(100% + 1em);
+ top: calc(100% + 1em);
+}
+
+.button:hover::before, .button:hover::after {
+ height: 410px;
+ width: 410px;
+}
+
+.button:hover {
+ color: rgb(10, 25, 30);
+}
+
+.button:active {
+ filter: brightness(.8);
+}
+ 
+  
 
     
     </style>
 </head>
 <body>
     <header> 
-        <div id="logo"> </div>
+        <div id="balk-boven">
+            <div id="logo"> </div>
+            <!-- <div class="menus"> MENU</div>
+            <div class="menus"> OVER ONS</div>  -->
+            <button class="button">Menu</button>
+            <button class="button">Over ons</button>
+           
+        </div>
+        
     </header>
+
 
  
 </body>
